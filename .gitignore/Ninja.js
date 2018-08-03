@@ -6,6 +6,7 @@ var client= new Discord.Client();
 
 client.on("ready", () => {    
     console.log("Je suis connecté");
+    client.user.setActivity("Loading...")
 });
 
 bot.login(process.env.TOKEN)
