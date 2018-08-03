@@ -6,7 +6,6 @@ var client= new Discord.Client();
 
 client.on("ready", () => {    
     console.log("Je suis connecté");
-    .setGame("Loading...")
 });
 
 bot.login(process.env.TOKEN)
