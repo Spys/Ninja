@@ -8,4 +8,4 @@ client.on("ready", () => {
     console.log("Je suis connecté");
 });
 
-client.login(process.env.TOKEN)
+bot.login(process.env.TOKEN)
