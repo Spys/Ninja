@@ -20,8 +20,8 @@ var member = message.member;
  switch(args[0].toLowerCase()) {
   case"aide":
   var aide_embed = new Discord.RichEmbed()
-   .setTitle("test !")
-   .setDescription("test")
+   .setTitle("Bienvenue sur la command !aide")
+   .setDescription("toutes les comand se retrouverons juste ici :)")
    .addField("teste 2", "ceci et un test pour les future")
 message.channel.send(aide_embed)
 break;
