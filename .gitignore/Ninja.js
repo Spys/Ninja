@@ -19,7 +19,7 @@ client.on("message", async function(message) {
 switch(args[0].toLowerCase()) {
   case"aide":
    var aide_embed = new Discord.RichEmbed()
-    .setColor("#00BFFF00")
+    .setColor("#F401FD")
     .setTitle("Bienvenue sur la command !aide")
     .setDescription("toutes les comand se retrouverons juste ici :)")
     .addField("n-aide", "Vous affiche Toutes les comand du bot")
@@ -43,9 +43,10 @@ client.on("message", async function(message) {
 switch(args[0].toLowerCase()) {
     case"infoserv":
      var infoserv_embed = new Discord.RichEmbed()
+      .setColor("#F401FD")
       .setTitle("Command infoserv")
       .setDescription("cette comand Vous permet de voir les Statistiques de votre Serveur")
-      .addField("Loading...", "Loading...")
+      .addField("Nombre de personnes", `il y a ${r.memberCount} Personnes sur le Serveur`)
       message.channel.send(infoserv_embed)
 break;
 }
