@@ -22,7 +22,7 @@ switch(args[0].toLowerCase()) {
     .setTitle("Bienvenue sur la command !aide")
     .setDescription("toutes les comand se retrouverons juste ici :)")
     .addField("n-aide", "Vous affiche Toutes les comand du bot")
-    .addField("n-infoServ", "le bot vous donne quelque information utile sur le serveur!")
+    .addField("n-infoserv", "le bot vous donne quelque information utile sur le serveur!")
   message.channel.send(aide_embed)
 break;
  }
@@ -40,7 +40,7 @@ client.on("message", async function(message) {
     
     var member = message.member;
 switch(args[0].toLowerCase()) {
-    case"infoServ":
+    case"infoserv":
      var infoserv_embed = new Discord.RichEmbed()
       .setTitle("Command infoserv")
       .setDescription("cette comand Vous permet de voir les Statistiques de votre Serveur")
