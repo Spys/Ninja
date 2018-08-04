@@ -19,10 +19,11 @@ client.on("message", async function(message) {
 switch(args[0].toLowerCase()) {
   case"aide":
    var aide_embed = new Discord.RichEmbed()
+    .setColor("#0000BFFF")
     .setTitle("Bienvenue sur la command !aide")
     .setDescription("toutes les comand se retrouverons juste ici :)")
     .addField("n-aide", "Vous affiche Toutes les comand du bot")
-    .addField("n-infoserv", "le bot vous donne quelque information utile sur le serveur!")
+    .addField("n-infoServ", "le bot vous donne quelque information utile sur le serveur!")
   message.channel.send(aide_embed)
 break;
  }
@@ -40,14 +41,14 @@ client.on("message", async function(message) {
     
     var member = message.member;
 switch(args[0].toLowerCase()) {
-    case"infoserv":
+    case"infoServ":
      var infoserv_embed = new Discord.RichEmbed()
       .setTitle("Command infoserv")
       .setDescription("cette comand Vous permet de voir les Statistiques de votre Serveur")
-      .addField("en construction", "Loading...")
+      .addField("")
       message.channel.send(infoserv_embed)
 break;
 }
 })
 
-           client.login(process.env.TOKEN)
+           client.login(process.env.TOKEN))
