@@ -7,7 +7,7 @@ var client= new Discord.Client();
 client.on("ready", () => {    
     client.user.setActivity("Loading...")
     console.log("Je suis connecté");
-    
+});   
 bot.login(process.env.TOKEN)
 
 if(message.content === prefix + "aide"){
@@ -17,4 +17,4 @@ if(message.content === prefix + "aide"){
      .setTitle("Toutes mes command sont ici!")
      .setDescription("ces command Peuves etre modifier")
      .addField("n'aide", "Affiche Toutes command du Bot!")
-}});
+};
