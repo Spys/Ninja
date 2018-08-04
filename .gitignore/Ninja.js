@@ -19,7 +19,7 @@ client.on("message", async function(message) {
 switch(args[0].toLowerCase()) {
   case"aide":
    var aide_embed = new Discord.RichEmbed()
-    .setColor("#0000BFFF")
+    .setColor("#00BFFF00")
     .setTitle("Bienvenue sur la command !aide")
     .setDescription("toutes les comand se retrouverons juste ici :)")
     .addField("n-aide", "Vous affiche Toutes les comand du bot")
