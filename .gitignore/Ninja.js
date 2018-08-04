@@ -46,7 +46,7 @@ switch(args[0].toLowerCase()) {
       .setColor("#F401FD")
       .setTitle("Command infoserv")
       .setDescription("cette comand Vous permet de voir les Statistiques de votre Serveur")
-      .addField("Nombre de personnes", `il y a ${r.memberCount} Personnes sur le Serveur`)
+      .addField("Nombre de personnes", `il y a ${memberCount} Personnes sur le Serveur`)
       message.channel.send(infoserv_embed)
 break;
 }
