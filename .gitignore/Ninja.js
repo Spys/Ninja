@@ -50,5 +50,4 @@ switch(args[0].toLowerCase()) {
 break;
 }
 })
-
-           client.login(process.env.TOKEN))
+client.login(process.env.TOKEN)
