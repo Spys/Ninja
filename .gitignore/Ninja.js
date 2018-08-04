@@ -27,3 +27,4 @@ message.channel.send(aide_embed)
 break;
 }
 })
+bot.login(process.env.TOKEN)
