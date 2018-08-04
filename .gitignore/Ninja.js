@@ -3,11 +3,7 @@ const Discord = require('discord.js');
 var prefix = "!";
 
 var bot = new Discord.Client();
-
-client.on("ready", () => {    
-    client.user.setActivity("Loading...")
-});   
-
+  
 client.on("message",async function(message) {
  switch(args[0].toLowerCase()) {
   case"aide":
