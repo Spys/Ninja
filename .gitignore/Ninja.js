@@ -10,8 +10,14 @@ client.on("ready", () => {
     console.log("Je suis connecté");
 });   
 
-if(message.content === prefix + "aide")
-    var aide_embed = new Discord.RichEmbed() 
-      .setTitle("test")
+client.on('message', function(message) {
+    if(message.content === prefix + "aide") {
+            var aide_embed = new Discord.RichEmbed() 
+                   .setTitle("test")
+           message.channel.send(aide_embed)
+   }
+  
+});
 
 bot.login(process.env.TOKEN)
+
