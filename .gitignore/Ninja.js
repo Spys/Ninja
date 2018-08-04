@@ -3,10 +3,15 @@ var prefix = "n'";
 
 var bot = new Discord.Client();
 var client= new Discord.Client();
+var aide_embed = new Discord.RichEmbed();
 
 client.on("ready", () => {    
     client.user.setActivity("Loading...")
     console.log("Je suis connecté");
 });   
+
+if(message.content === prefix + "aide")
+    var aide_embed = new Discord.RichEmbed() 
+      .setTitle("test")
 
 bot.login(process.env.TOKEN)
