@@ -16,6 +16,7 @@ client.on("message",async function(message) {
    .setTitle("test !")
    .setDescription("test")
    .addField("teste 2","ceci et un test pour les future")
+break;
  }
 
 })
