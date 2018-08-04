@@ -12,7 +12,7 @@ client.on("ready", () => {
 });   
 
 client.on('message', function(message) {
-    if(message.content === prefix + "aide") {
+    if(message.content === prefix + "Ninaide") {
             var aide_embed = new Discord.RichEmbed()
                    .setColor("#000101")
                    .setTitle("test")
