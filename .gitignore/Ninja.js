@@ -4,7 +4,7 @@ var prefix = "^";
 
 var bot = new Discord.Client();
 var client= new Discord.Client();
-var aide_embed = new Discord.RichEmbed();
+
 
 client.on("ready", () => {    
     client.user.setActivity("Loading...")
