@@ -22,7 +22,7 @@ var member = message.member;
   var aide_embed = new Discord.RichEmbed()
    .setTitle("Bienvenue sur la command !aide")
    .setDescription("toutes les comand se retrouverons juste ici :)")
-   .addField("teste 2", "ceci et un test pour les future")
+   .addField("!aide", "Vous affiche Toutes les comand du bot")
 message.channel.send(aide_embed)
 break;
 }
