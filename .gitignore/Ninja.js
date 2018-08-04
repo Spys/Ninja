@@ -4,7 +4,7 @@ var prefix = "!";
 
 var bot = new Discord.Client();
   
-client.on("message",async function(message) {
+bot.on("message",async function(message) {
  switch(args[0].toLowerCase()) {
   case"aide":
   var aide_embed = new Discord.RichEmbed
