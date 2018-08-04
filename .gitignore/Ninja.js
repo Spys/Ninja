@@ -2,9 +2,9 @@ const Discord = require('discord.js');
 
 var prefix = "!";
 
-var bot = new Discord.Client();
+var client = new Discord.Client();
   
-bot.on("message",async function(message) {
+client.on("message",async function(message) {
  switch(args[0].toLowerCase()) {
   case"aide":
   var aide_embed = new Discord.RichEmbed
@@ -17,4 +17,4 @@ break;
 
 })
 
-bot.login(process.env.TOKEN)
+client.login(process.env.TOKEN)
