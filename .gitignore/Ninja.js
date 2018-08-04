@@ -7,7 +7,6 @@ var client = new Discord.Client();
 
 client.on("ready", () => {    
     client.user.setActivity("Loading...")
-    console.log("Je suis connecté");
 });   
 
 client.on("message",async function(message) {
