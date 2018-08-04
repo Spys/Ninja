@@ -45,7 +45,7 @@ switch(args[0].toLowerCase()) {
      var infoserv_embed = new Discord.RichEmbed()
       .setTitle("Command infoserv")
       .setDescription("cette comand Vous permet de voir les Statistiques de votre Serveur")
-      .addField("")
+      .addField("Loading...", "Loading...")
       message.channel.send(infoserv_embed)
 break;
 }
