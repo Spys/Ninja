@@ -3,7 +3,6 @@ const Discord = require('discord.js');
 var prefix = "!";
 
 var bot = new Discord.Client();
-var client = new Discord.Client();
 
 client.on("ready", () => {    
     client.user.setActivity("Loading...")
