@@ -16,6 +16,7 @@ client.on('message', function(message) {
             var aide_embed = new Discord.RichEmbed()
                    .setColor("#000101")
                    .setTitle("test")
+                   .addField("test")
            message.channel.send(aide_embed);
    }
   
