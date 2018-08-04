@@ -15,6 +15,7 @@ client.on("message",async function(message) {
   case"aide":
   var aide_embed = new Discord.RichEmbed
    .setTitle("test !")
+   .setDescription("test")
    .addField("teste 2","ceci et un test pour les future")
  }
 
