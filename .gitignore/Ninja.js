@@ -19,7 +19,7 @@ var member = message.member;
 
  switch(args[0].toLowerCase()) {
   case"aide":
-  var aide_embed = new Discord.RichEmbed
+  var aide_embed = new Discord.RichEmbed()
    .setTitle("test !")
    .setDescription("test")
    .addField("teste 2", "ceci et un test pour les future")
