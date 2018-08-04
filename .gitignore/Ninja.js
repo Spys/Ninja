@@ -4,7 +4,7 @@ var prefix = "!";
 
 var client = new Discord.Client();
   
-client.on("message",async function(message) {
+client.on("message",async function(message)) {
 if (message.author.equals(bot.user)) return;
 
 if (!message.content.startsWith(prefix)) return;
