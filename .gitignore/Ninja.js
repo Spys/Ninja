@@ -9,16 +9,16 @@ client.on(`message`, message => {
     const args = message.content.slice(prefix.lenght).split(/ +/);
     command = args.shift().toLowerCase();
 
-    if (command === "kick") {
+ if (command === "kick") {
         let modRole = message.guild.roles.find("name", "test");
         if(!message.member.roles.has(modRole.id)) {
             return message.reply("tu n'as pas la permission pour utiliser cette command.").catch(console.error);
-}          
 if(message.mentions.users.size ===0) {
     return message.reply("Merci de mentionner l'utilisateur a expulser.").catch(console.error);
 }
+
 let kickMember = message.guild.member(message.mentions.users.first());
-id(!kickMember) {
+id(!kickMember); {
     return message.reply("Cet utilisateurs et introuvable ou impossible a expulser.")
 }
 if(!message.guild.member(client.users).hasPermission("KICK_MEMBERS")) {
@@ -28,6 +28,7 @@ kickMember.kick().then(member => {
     message.reply(`${member.user.username} a ete expulse avec succes.`).catch(console.error);
     message.guild.channels.send(`**${member.user.username} a ete expulser du discord par **${message.author.username}**`)
 }).catch(console.error);
+}
 client.on("message", async function(message) {
     if (message.author.equals(client.user)) return;
 
