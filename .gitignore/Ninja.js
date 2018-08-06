@@ -27,7 +27,6 @@ if(!message.guild.member(client.users).hasPermission("KICK_MEMBERS")) {
 kickMember.kick().then(member => {
     message.reply(`${member.user.username} a ete expulse avec succes.`).catch(console.error);
     message.guild.channels.send(`**${member.user.username} a ete expulser du discord par **${message.author.username}**`).catch(console.error);
-break;
 })
 }
 client.on("message", async function(message) {
@@ -73,4 +72,4 @@ break;
 }
 },)}},)
 
-client.login(process.env.TOKEN)
+client.login(process.env.TOKEN)N)
