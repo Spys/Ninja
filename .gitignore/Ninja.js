@@ -6,7 +6,7 @@ var client = new Discord.Client();
 
 client.on(`message`, message => {
     let command = message.content.split(" ")[0];
-    const args = message.content.slice(prefix.lenght).split(/ +/);
+    const args = message.content.slice(prefix.lenght).split(" ");
     command = args.shift().toLowerCase();
 
  if (command === "kick") {
