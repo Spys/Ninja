@@ -72,4 +72,4 @@ break;
 }
 },)}},)
 
-client.login(process.env.TOKEN)N)
+client.login(process.env.TOKEN)
