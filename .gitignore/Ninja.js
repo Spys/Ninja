@@ -11,21 +11,21 @@ client.on(`message`, message => {
  if (message.content === prefix + "kick") {
         let modRole = message.guild.roles.find("name", "test");
         if(!message.member.roles.has(modRole.id)) {
-            return message.reply("tu n'as pas la permission pour utiliser cette command.").catch(console.error);
+            return message.reply(":cop: *tu n'as pas la **permission** pour utiliser cette command.*").catch(console.error);
 if(message.mentions.users.size ===0) {
-    return message.reply("Merci de mentionner l'utilisateur a expulser.").catch(console.error);
+    return message.reply(":shrug: *Merci de mentionner **l'utilisateur** a expulser.*").catch(console.error);
 }
  
 let kickMember = message.guild.member(message.mentions.users.first())
 id(!kickMember); {
-    return message.reply("Cet utilisateurs et introuvable ou impossible a expulser.")
+    return message.reply("*Cet utilisateurs et **introuvable ou impossible** a expulser.* :thinking: ")
 }
 if(!message.guild.member(client.users).hasPermission("KICK_MEMBERS")) {
-    return message.reply("je n'ai pas la permission Kick_MEMBERS pour faire ceci.").catch(console.error);
+    return message.reply("*je n'ai pas la permission Kick_MEMBERS pour faire ceci.* :thumbsdown: ").catch(console.error);
 }
 kickMember.kick().then(member => {
     message.reply(`${member.user.username} a ete expulse avec succes.`).catch(console.error);
-    message.guild.channels.send(`**${member.user.username}** a ete expulser du discord par **${message.author.username}**`).catch(console.error);
+    message.guild.channels.send(` :warning: **${member.user.username}** a ete expulser du discord par **${message.author.username}**`).catch(console.error);
 });
 }}
  
