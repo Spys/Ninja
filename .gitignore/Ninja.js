@@ -56,5 +56,6 @@ break;
     message.channel.send(client.guild.map(r => r.name + `| *${r.memberCount}* membre`))
 break;
  }
-})
+});
+
 client.login(process.env.TOKEN)
