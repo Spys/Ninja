@@ -16,7 +16,7 @@ if(message.mentions.users.size ===0) {
     return message.reply("Merci de mentionner l'utilisateur a expulser.").catch(console.error);
 }
  
-let kickMember = message.guild.member(message.mentions.users.first());
+let kickMember = message.guild.member(message.mentions.users.first())
 id(!kickMember); {
     return message.reply("Cet utilisateurs et introuvable ou impossible a expulser.")
 }
