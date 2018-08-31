@@ -14,7 +14,7 @@ client.on(`message`, message => {
  
     if (message.content === prefix + "kick") {
         let modRole = message.guild.roles.find("name", "test");
-        if(!message.member.roles.has(modRole.id)) {
+        if(!message.member.roles.has(modRole)) {
         return message.reply(":cop: |*tu n'as pas la **permission** pour utiliser cette command.*").catch(console.error);
             if(message.mentions.users.size === 0) {
                 return message.reply(":shrug: |*Merci de mentionner **l'utilisateur** a expulser.*").catch(console.error);
@@ -80,4 +80,4 @@ client.on("message", async function(message) {
  }
 });
 
-client.login(process.env.TOKEN)
+client.login(process.env.TOKEN);
