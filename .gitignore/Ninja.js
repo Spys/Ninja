@@ -12,7 +12,7 @@ client.on(`message`, message => {
     let command = message.content.split(" ")[0];
 
     const args = message.content.slice(prefix.lenght).split(/ +/);
-    
+
     if (message.author.equals(client.user)) return;
 
  
@@ -89,7 +89,7 @@ client.on("message", async function(message) {
     switch(args[0].toLowerCase()) {
     case"infoserv":
     var list_embed = new Discord.RichEmbed()
-    message.channel.send(client.guild.map(r => r.name + `| *${r.memberCount}* membre`))
+    message.channel.send(r => r.name + `| *${r.memberCount}* membre`)
     break;
  }
 });
