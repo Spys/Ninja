@@ -89,7 +89,7 @@ client.on("message", async function(message) {
     switch(args[0].toLowerCase()) {
     case"infoserv":
     var list_embed = new Discord.RichEmbed()
-    message.channel.send(`| *${r.memberCount}* membre`)
+    message.channel.send(`| *${memberCount}* membre`)
     break;
  }
 });
