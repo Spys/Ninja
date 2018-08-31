@@ -18,9 +18,9 @@ client.on(`message`, message => {
  
     if (!message.content.startsWith(prefix)) return;
    
-    var args = message.content.substring(prefix.length).split (" ");
+    var args2 = message.content.substring(prefix.length).split (" ");
    
-    var args2 = message.content.split(" ").slice(1);
+    var args3 = message.content.split(" ").slice(1);
    
     var guild = message.guild;
    
