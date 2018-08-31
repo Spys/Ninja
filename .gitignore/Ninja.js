@@ -10,7 +10,21 @@ client.on(`ready`, function () {
  
 client.on(`message`, message => {
     let command = message.content.split(" ")[0];
+
     const args = message.content.slice(prefix.lenght).split(/ +/);
+    
+    if (message.author.equals(client.user)) return;
+
+ 
+    if (!message.content.startsWith(prefix)) return;
+   
+    var args = message.content.substring(prefix.length).split (" ");
+   
+    var args2 = message.content.split(" ").slice(1);
+   
+    var guild = message.guild;
+   
+    var member = message.member;
  
     if (message.content === prefix + "kick") {
         let modRole = message.guild.roles.find("name", "test");
