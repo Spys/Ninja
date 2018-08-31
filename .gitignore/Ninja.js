@@ -6,6 +6,7 @@ var client = new Discord.Client();
  
 client.on(`ready`, function () {
     console.log("Je suis connecter !");
+    client.user.setActivity("v0.2.6 |n-aide")
 })
  
 client.on(`message`, message => {
@@ -140,8 +141,10 @@ client.on("message", async function(message) {
         .setTitle("Voici ma seul invitation Disponnible")
         
 
-    .addField("|https://discordapp.com/oauth2/authorize?client_id=475069382813548564&scope=bot&permissions=2146958847", "Merci de m'inviter sur plusieur serveur ;)")
-    message.channel.send(invite_embed)
+        .addField("|https://discordapp.com/oauth2/authorize?client_id=475069382813548564&scope=bot&permissions=2146958847", "Merci de m'inviter sur plusieur serveur ;)")
+        
+        
+        message.channel.send(invite_embed)
     break;
     }
 });
