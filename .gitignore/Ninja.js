@@ -71,9 +71,9 @@ client.on("message", async function(message) {
     var guild = message.guild;
    
     var member = message.member;
-    
+
     switch(args[0].toLowerCase()) {
-    case"serverlist":
+    case"infoserv":
     var list_embed = new Discord.RichEmbed()
     message.channel.send(client.guild.map(r => r.name + `| *${r.memberCount}* membre`))
     break;
