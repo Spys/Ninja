@@ -70,6 +70,7 @@ client.on("message", async function(message) {
             .addField("n-aide", "|Vous affiche Toutes les comand du bot")
             .addField("n-infoserv", "*Cette command et en maintenance...*")
             .addField("n-infobot", "|Vous affiche toutes les information du bot")
+            .addField("n-invite", "|Vous affiche mon lien d'invitation")
     message.channel.send(aide_embed)
     break;
     }
@@ -114,8 +115,33 @@ client.on("message", async function(message) {
         .setTitle("bienvenue sur ma description")
         .addField(":wrench:|Cree par Nefer.", "->aider et optimiser par ilian.")
         .addField(":tools:|concu Specialement Pour l'administartion.", "->Bot Multifonction (Audio,jeux,ect..)")
-        .addField(":warning:|Bot en v0.2.4", "En Devellopement constant.")
+        .addField(":warning:|Bot en v0.2.5", "En Devellopement constant.")
     message.channel.send(infobot_embed)
+    break;
+    }
+});
+client.on("message", async function(message) {
+    if (message.author.equals(client.user)) return;
+ 
+    if (!message.content.startsWith(prefix)) return;
+   
+    var args = message.content.substring(prefix.length).split (" ");
+   
+    var args2 = message.content.split(" ").slice(1);
+   
+    var guild = message.guild;
+   
+    var member = message.member;
+ 
+    switch(args[0].toLowerCase()) {
+    case"invite":
+    var invite_embed = new Discord.RichEmbed()
+        .setColor("#010101")
+        .setTitle("Voici ma seul invitation Disponnible")
+        
+
+    .addField("|https://discordapp.com/oauth2/authorize?client_id=475069382813548564&scope=bot&permissions=2146958847")
+    message.channel.send(invite_embed)
     break;
     }
 });
