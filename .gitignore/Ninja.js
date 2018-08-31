@@ -65,10 +65,10 @@ client.on("message", async function(message) {
     case"aide":
     var aide_embed = new Discord.RichEmbed()
         .setColor("#F401FD")
-        .setTitle("Bienvenue sur la command n-aide")
-        .setDescription("toutes les comand se retrouverons juste ici :)")
-            .addField("n-aide", "Vous affiche Toutes les comand du bot")
-            .addField("n-infoserv", "le bot vous donne quelque information utile sur le serveur!")
+        .setTitle("Bienvenue sur le Pannel de command")
+        .setDescription("toutes mes command se grouperons ici ")
+            .addField("> n-aide", "|Vous affiche Toutes les comand du bot")
+            .addField("> n-infoserv", "|le bot vous donne quelque information utile sur votre serveur !")
     message.channel.send(aide_embed)
     break;
     }
@@ -89,9 +89,33 @@ client.on("message", async function(message) {
     switch(args[0].toLowerCase()) {
     case"infoserv":
     var list_embed = new Discord.RichEmbed()
-    message.channel.send(`| *${memberCount}* membre`)
+    message.channel.send(client.guild.map(`r => r.name + | *${r.memberCount}* membre`))
     break;
  }
 });
-
+client.on("message", async function(message) {
+    if (message.author.equals(client.user)) return;
+ 
+    if (!message.content.startsWith(prefix)) return;
+   
+    var args = message.content.substring(prefix.length).split (" ");
+   
+    var args2 = message.content.split(" ").slice(1);
+   
+    var guild = message.guild;
+   
+    var member = message.member;
+ 
+    switch(args[0].toLowerCase()) {
+    case"infobot":
+    var infobot_embed = new Discord.RichEmbed()
+        .setColor("#F401FD")
+        .setTitle("bienvenue sur ma description")
+        .addField(":wrench:|Cree par Nefer.", "->aider et optimiser par ilian.")
+        .addField(":tools:|concu Specialement Pour l'administartion.", "->Bot Multifonction (Audio,jeux,ect..)")
+        .addField(":warning:|Bot en v2.2", "En Devellopement constant.")
+    message.channel.send(infobot_embed)
+    break;
+    }
+});
 client.login(process.env.TOKEN);
