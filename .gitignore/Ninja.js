@@ -51,7 +51,7 @@ client.on("message", async function(message) {
     case"aide":
     var aide_embed = new Discord.RichEmbed()
         .setColor("#F401FD")
-        .setTitle("Bienvenue sur la command !aide")
+        .setTitle("Bienvenue sur la command n-aide")
         .setDescription("toutes les comand se retrouverons juste ici :)")
             .addField("n-aide", "Vous affiche Toutes les comand du bot")
             .addField("n-infoserv", "le bot vous donne quelque information utile sur le serveur!")
@@ -59,6 +59,7 @@ client.on("message", async function(message) {
     break;
  
     case"serverlist":
+    var list_embed = new Discord.RichEmbed()
     message.channel.send(client.guild.map(r => r.name + `| *${r.memberCount}* membre`))
     break;
  }
