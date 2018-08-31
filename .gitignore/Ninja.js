@@ -64,11 +64,12 @@ client.on("message", async function(message) {
     switch(args[0].toLowerCase()) {
     case"aide":
     var aide_embed = new Discord.RichEmbed()
-        .setColor("#F401FD")
+        .setColor("#010101")
         .setTitle("Bienvenue sur le Pannel de command")
         .setDescription("toutes mes command se grouperons ici ")
-            .addField("> n-aide", "|Vous affiche Toutes les comand du bot")
-            .addField("> n-infoserv", "|le bot vous donne quelque information utile sur votre serveur !")
+            .addField("n-aide", "|Vous affiche Toutes les comand du bot")
+            .addField("n-infoserv", "|le bot vous donne quelque information utile sur votre serveur !")
+            .addField("n-infobot", "|Vous affiche toutes les information du bot")
     message.channel.send(aide_embed)
     break;
     }
@@ -109,11 +110,11 @@ client.on("message", async function(message) {
     switch(args[0].toLowerCase()) {
     case"infobot":
     var infobot_embed = new Discord.RichEmbed()
-        .setColor("#F401FD")
+        .setColor("#FE0101")
         .setTitle("bienvenue sur ma description")
         .addField(":wrench:|Cree par Nefer.", "->aider et optimiser par ilian.")
         .addField(":tools:|concu Specialement Pour l'administartion.", "->Bot Multifonction (Audio,jeux,ect..)")
-        .addField(":warning:|Bot en v2.2", "En Devellopement constant.")
+        .addField(":warning:|Bot en v0.2.3", "En Devellopement constant.")
     message.channel.send(infobot_embed)
     break;
     }
