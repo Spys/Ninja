@@ -57,12 +57,15 @@ client.on("message", async function(message) {
             .addField("n-infoserv", "le bot vous donne quelque information utile sur le serveur!")
     message.channel.send(aide_embed)
     break;
- 
+    }
+});
+ client.on("message", async function(message) {
+    switch(args[0].toLowerCase()) {
     case"serverlist":
     var list_embed = new Discord.RichEmbed()
     message.channel.send(client.guild.map(r => r.name + `| *${r.memberCount}* membre`))
     break;
  }
 });
- 
+
 client.login(process.env.TOKEN);
