@@ -60,6 +60,18 @@ client.on("message", async function(message) {
     }
 });
  client.on("message", async function(message) {
+    if (message.author.equals(client.user)) return;
+ 
+    if (!message.content.startsWith(prefix)) return;
+   
+    var args = message.content.substring(prefix.length).split (" ");
+   
+    var args2 = message.content.split(" ").slice(1);
+   
+    var guild = message.guild;
+   
+    var member = message.member;
+    
     switch(args[0].toLowerCase()) {
     case"serverlist":
     var list_embed = new Discord.RichEmbed()
