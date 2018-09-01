@@ -6,7 +6,7 @@ var client = new Discord.Client();
  
 client.on(`ready`, function () {
     console.log("Je suis connecter !");
-    client.user.setActivity("v0.2.8 |n-aide")
+    client.user.setActivity("v0.2.6 |n-aide")
 })
  
 client.on(`message`, message => {
@@ -72,7 +72,7 @@ client.on("message", async function(message) {
             .addField("n-infoserv", ":warning:|*Cette command et en maintenance...*")
             .addField("n-infobot", "|Vous affiche toutes les information du bot")
             .addField("n-invite", "|Vous affiche mon lien d'invitation")
-        .setDescription("-->*D'autre command sont surement entrain d'etre rajouter*<--")
+            .setFooter("Ninjay |by Nefer")
     message.channel.send(aide_embed)
     break;
     }
@@ -93,7 +93,10 @@ client.on("message", async function(message) {
     switch(args[0].toLowerCase()) {
     case"infoserv":
     var list_embed = new Discord.RichEmbed()
-    message.channel.send(`|**${memberCount}** membre sur le serveur`)
+    .setColor("#010101")
+    .setTitle("**cette command et en maintenance**")
+    .setDescription("*Loading...*")
+    .setFooter("Ninjay |by Nefer")
     break;
  }
 });
@@ -117,7 +120,8 @@ client.on("message", async function(message) {
         .setTitle("bienvenue sur ma description")
         .addField(":wrench:|Cree par Nefer.", "->aider et optimiser par ilian.")
         .addField(":tools:|concu Specialement Pour l'administration.", "->Bot Multifonction (Audio,jeux,ect..)")
-        .addField(":warning:|Bot en v0.2.8", "En Devellopement constant.")
+        .addField(":warning:|Bot en v0.2.6", "En Devellopement constant.")
+        .setFooter("Ninjay |by Nefer")
     message.channel.send(infobot_embed)
     break;
     }
@@ -144,7 +148,7 @@ client.on("message", async function(message) {
 
         .addField("|https://discordapp.com/oauth2/authorize?client_id=475069382813548564&scope=bot&permissions=2146958847", "Merci de m'inviter sur plusieur serveur ;)")
         
-        
+        .setFooter("Ninjay |by Nefer")
         message.channel.send(invite_embed)
     break;
     }
