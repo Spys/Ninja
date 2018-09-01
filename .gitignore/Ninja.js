@@ -90,6 +90,8 @@ client.on("message", async function(message) {
    
     var member = message.member;
 
+    var size = message.size;
+
     switch(args[0].toLowerCase()) {
     case"infoserv":
     var list_embed = new Discord.RichEmbed()
