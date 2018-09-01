@@ -6,7 +6,7 @@ var client = new Discord.Client();
  
 client.on(`ready`, function () {
     console.log("Je suis connecter !");
-    client.user.setActivity("v0.2.6 |n-aide")
+    client.user.setActivity("v0.2.7 |n-aide")
 })
  
 client.on(`message`, message => {
@@ -97,6 +97,7 @@ client.on("message", async function(message) {
     .setTitle("**cette command et en maintenance**")
     .setDescription("*Loading...*")
     .setFooter("Ninjay |by Nefer")
+    message.channel.send(list_embed)
     break;
  }
 });
@@ -120,7 +121,7 @@ client.on("message", async function(message) {
         .setTitle("bienvenue sur ma description")
         .addField(":wrench:|Cree par Nefer.", "->aider et optimiser par ilian.")
         .addField(":tools:|concu Specialement Pour l'administration.", "->Bot Multifonction (Audio,jeux,ect..)")
-        .addField(":warning:|Bot en v0.2.6", "En Devellopement constant.")
+        .addField(":warning:|Bot en v0.2.7", "En Devellopement constant.")
         .setFooter("Ninjay |by Nefer")
     message.channel.send(infobot_embed)
     break;
