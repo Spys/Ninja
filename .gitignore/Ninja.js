@@ -6,7 +6,7 @@ var client = new Discord.Client();
  
 client.on(`ready`, function () {
     console.log("Je suis connecter !");
-    client.user.setActivity("v0.2.7 |n-aide")
+    client.user.setActivity("v0.2.8 |n-aide")
 })
  
 client.on(`message`, message => {
@@ -66,10 +66,10 @@ client.on("message", async function(message) {
     case"aide":
     var aide_embed = new Discord.RichEmbed()
         .setColor("#010101")
-        .setTitle("Bienvenue sur le Pannel de command")
+        .setTitle("**Bienvenue sur le Pannel de command**")
         .setDescription("toutes mes command se regrouperons ici ")
             .addField("n-aide", "|Vous affiche Toutes les comand du bot")
-            .addField("n-infoserv", ":warning:|Command Incomplete")
+            .addField("n-infoserv", ":warning:|Command Incomplete|Indisponnible")
             .addField("n-infobot", "|Vous affiche toutes les information du bot")
             .addField("n-invite", "|Vous affiche mon lien d'invitation")
             .setFooter("Ninjay |by Nefer")
@@ -122,10 +122,10 @@ client.on("message", async function(message) {
     case"infobot":
     var infobot_embed = new Discord.RichEmbed()
         .setColor("#010101")
-        .setTitle("bienvenue sur ma description")
-        .addField(":wrench:|Cree par Nefer.", "->aider et optimiser par ilian.")
-        .addField(":tools:|concu Specialement Pour l'administration.", "->Bot Multifonction (Audio,jeux,ect..)")
-        .addField(":warning:|Bot en v0.2.7", "En Devellopement constant.")
+        .setTitle("bienvenue sur mes Information !")
+        .addField(":wrench: |Cree par Nefer.", "->aider et optimiser par ilian.")
+        .addField(":tools: |concu Specialement Pour l'administration.", "->Bot Multifonction (Audio,jeux,ect..)")
+        .addField(":warning: |Bot en v0.2.8", "En Devellopement constant.")
         .setFooter("Ninjay |by Nefer")
     message.channel.send(infobot_embed)
     break;
