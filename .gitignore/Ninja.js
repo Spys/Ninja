@@ -6,7 +6,7 @@ var client = new Discord.Client();
  
 client.on(`ready`, function () {
     console.log("Je suis connecter !");
-    client.user.setActivity("v0.2.8 |n-aide")
+    client.user.setActivity("v0.2.8 | n-aide")
 })
  
 client.on(`message`, message => {
