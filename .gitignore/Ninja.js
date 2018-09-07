@@ -89,6 +89,8 @@ client.on("message", async function(message) {
     var guild = message.guild;
    
     var member = message.member;
+    
+    var members = message.members;
 
     var size = message.size;
 
