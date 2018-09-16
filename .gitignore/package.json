@@ -9,6 +9,9 @@
   "author": "Spy's",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^11.3.2"
+    "discord.js": "^11.3.2",
+    "fs-extra": "^7.0.0",
+    "opusscript": "0.0.6",
+    "ytdl-core": "^0.25.2"
   }
 }
