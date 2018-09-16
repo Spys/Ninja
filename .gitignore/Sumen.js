@@ -6,6 +6,6 @@ var client = new Discord.Client();
  
 client.on(`ready`, function () {
     console.log("Je suis connecter !");
-    client.user.setActivity("reinitialisation...")
+    client.user.setActivity("Programmation...")
 })
 client.login(process.env.TOKEN);
