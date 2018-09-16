@@ -12,7 +12,7 @@ var servers = {};
  
 client.on(`ready`, function () {
     console.log("Je suis connecter !");
-    client.user.setActivity(":wrench:|Programmation...")
+    client.user.setActivity("s_aide | By nefer")
 })
 
 function play(connection, message) {
