@@ -73,6 +73,7 @@ client.on("message", message => {
             .setFooter("__Sumen__ | By *Nefer#4398*")
             message.reply("| je t'es envoyer t'es Statistiques en Priver !")
             message.author.send({embed: stats_embed});
+            message.channel.sendMessage(stats_embed)
             break;
         }
         if(message.content === prefix + "infobot") {
