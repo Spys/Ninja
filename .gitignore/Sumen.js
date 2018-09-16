@@ -41,7 +41,7 @@ client.on("message", message => {
          .addField("s_infobot", "| je vous montre toutes Mes Information")
          .addField("s_infoserv", "| Je vous montre quelques Informations sur le serveur")
          .addField("s_kick", "| Vous permet de Kick une personnes")
-         .addField("s_ban", "|ban la personne demander")
+         .addField("s_ban", "| ban la personne demander")
          .addField("s_clear", "| suprime le nombre de message demander")
          .setFooter("__Sumen__| By Nefer#4398")
       message.channel.sendMessage(aide_embed);
@@ -50,6 +50,7 @@ client.on("message", message => {
         var invite_embed = new Discord.RichEmbed()
          .setColor("#61BCFF")
          .setTitle("| *Voici m'a seul invitations Disponnible!*")
+         .setDescription("Merci de l'envoyer a plusieur personne")
          .addField("| **Link:** *https://discordapp.com/oauth2/authorize?client_id=490798358168993792&scope=bot&permissions=2146958847*")
          .setFooter("__Sumen__ | By *Nefer#4398*")
          message.channel.sendMessage(invite_embed);
@@ -92,7 +93,7 @@ client.on("message", message => {
             var infoserv_embed = new Discord.RichEmbed()
             .setColor("#4398")
             .setTitle("| Voici Quelques Informations sur le serveur !")
-            .addField("| Nombre de membres:", message.guild.size)
+            .addField("| Nombre de membres:", message.guild.member.size)
             .addField("| Nombre de salons & de Categories", message.guild.channels.size)
             .setThumbnail(message.guild.avatarURL)
             .setFooter("__Sumen__ | By *Nefer#4398*")
