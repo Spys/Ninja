@@ -52,6 +52,7 @@ client.on("message", message => {
          .setTitle("| *Voici m'a seul invitations Disponnible!*")
          .addField("| **Link:** *https://discordapp.com/oauth2/authorize?client_id=490798358168993792&scope=bot&permissions=2146958847*")
          .setFooter("__Sumen__ | By *Nefer#4398*")
+         message.channel.sendMessage(invite_embed);
 
          if(!message.content.startsWith(prefix)) return;
           var args = message.content.substring(prefix.length).split(" ");
