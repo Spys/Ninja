@@ -8,6 +8,4 @@ client.on(`ready`, function () {
     console.log("Je suis connecter !");
     client.user.setActivity("reinitialisation...")
 })
- 
-
 client.login(process.env.TOKEN);
