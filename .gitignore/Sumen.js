@@ -59,7 +59,7 @@ client.on("message", message => {
           var args = message.content.substring(prefix.length).split(" ");
 
         switch (args[0].toLowerCase()) {
-          case "Statistiques":
+          case "statistiques":
              
              var userCreateDate = message.author.createdAt.toString().split(" ");
              var msgauthor = message.author.id;
