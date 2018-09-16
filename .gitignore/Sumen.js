@@ -84,7 +84,6 @@ client.on("message", message => {
             .addField(":robot:| Nom :", `${client.user.tag}`, true)
             .addField(":hash:| Mon Descriminateur :", `#${client.user.discriminator}`)
             .addField(":id:| ID :" , `${client.user.id}`)
-            .setThumbnail(message.user.avatarURL)
             .setFooter("__Sumen__ | By *Nefer#4398*")
             message.channel.sendMessage(infobot_embed)
 
