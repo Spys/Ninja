@@ -35,6 +35,7 @@ client.on("message", message => {
          .setColor("#61BCFF")
          .setTitle("|*Voici ma liste de mes command*")
          .setDescription("Toutes mes command y seront Archiver")
+         message.channel.send("``s.aide``  *=*  ``Vous aideras pour les commands``");
       message.channel.sendMessage(aide_embed);
 
       if(message.content === prefix + "invite")
