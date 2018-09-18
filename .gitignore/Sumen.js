@@ -52,7 +52,7 @@ client.on("message", message => {
          .setTitle("| *Voici m'a seul invitations Disponnible!*")
          .setDescription("Merci de l'envoyer a plusieur personne")
          .addField("| **Link:** *https://discordapp.com/oauth2/authorize?client_id=490798358168993792&scope=bot&permissions=2146958847*")
-         .setFooter("__Sumen__ | By *Nefer#4398*")
+         .setFooter("Sumen| By Nefer#4398")
          message.channel.sendMessage(invite_embed);
 
          if(!message.content.startsWith(prefix)) return;
@@ -71,10 +71,9 @@ client.on("message", message => {
             .addField(`:id:| de l'utilisateur`, msgauthor, true)
             .addField(":timer:| Date de creation de l'utilisateur:", userCreateDate[1] + ' ' + userCreateDate[2] + ' ' + userCreateDate[3])
             .setThumbnail(message.author.avatarURL)
-            .setFooter("__Sumen__ | By *Nefer#4398*")
-            message.reply("| je t'es envoyer t'es Statistiques en Priver !")
+            .setFooter("Sumen | By Nefer#4398")
+            message.reply("je t'es envoyer t'es Statistiques en Priver !")
             message.author.send({embed: stats_embed});
-            message.channel.sendMessage(stats_embed)
             break;
         }
         if(message.content === prefix + "infobot") {
@@ -84,7 +83,7 @@ client.on("message", message => {
             .addField(":robot:| Nom :", `${client.user.tag}`, true)
             .addField(":hash:| Mon Descriminateur :", `#${client.user.discriminator}`)
             .addField(":id:| ID :" , `${client.user.id}`)
-            .setFooter("__Sumen__ | By *Nefer#4398*")
+            .setFooter("Sumen | By Nefer#4398")
             message.channel.sendMessage(infobot_embed)
 
         }
@@ -95,7 +94,7 @@ client.on("message", message => {
             .addField("| Nombre de membres:", message.guild.member.size)
             .addField("| Nombre de salons & de Categories", message.guild.channels.size)
             .setThumbnail(message.guild.avatarURL)
-            .setFooter("__Sumen__ | By *Nefer#4398*")
+            .setFooter("Sumen | By Nefer#4398")
             message.channel.sendMessage(infoserv_embed)
         }
         if(message.content.startsWith(prefix + "kick")) {
@@ -107,13 +106,13 @@ client.on("message", message => {
 
             var kick = message.guild.member(message.mentions.users.first());
             if(!kick) {
-                return message.channel.send(":shrug:| je ne sais pas si l'utilisateur existe")
+                return message.channel.send(":shrug:| je ne sais pas si l'utilisateur existe").catch()
             }
             if(!message.guild.member(client.user).hasPermission("KICK_MEMBERS")) {
-                return message.channel.send(":poop:| je n'ai pas la permission de faire ceci")
+                return message.channel.send(":poop:| je n'ai pas la permission de faire ceci").catch()
             }
             kick.kick().then(member => {
-                message.channel.send(`${member.user.username} est kick par ${message.author.username}`)
+                message.channel.send(`${member.user.username} est kick par ${message.author.username}`).catch()
             });
         }
         if(message.content.startsWith(prefix + "ban")) {
@@ -146,5 +145,6 @@ client.on("message", message => {
               message.channel.send(`${args[0]} messages ont ete suprimer !`);
           });
         }
+        
 })
 client.login(process.env.TOKEN);
