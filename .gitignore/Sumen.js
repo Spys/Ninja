@@ -12,7 +12,7 @@ var servers = {};
  
 client.on(`ready`, function () {
     console.log("Je suis connecter !");
-    client.user.setActivity("s.aide | By nefer")
+    client.user.setActivity("s_aide | By nefer")
 })
 
 function play(connection, message) {
@@ -34,15 +34,8 @@ client.on("message", message => {
         var aide_embed = new Discord.RichEmbed()
          .setColor("#61BCFF")
          .setTitle("|*Voici ma liste de mes command*")
-         .setDescription("**Toutes mes command y seront Archiver**")
-         .addField("s.aide", "| Vous aideras Pour les commands")
-         .addField("s.invite", "| Envoie la seul invitation du bot")
-         .addField("s.stat", "| Vous envoie vos Statistiques en message prive")
-         .addField("s.infobot", "| je vous montre toutes Mes Information")
-         .addField("s.infoserv", "| Je vous montre quelques Informations sur le serveur")
-         .addField("s.kick", "| Vous permet de Kick une personnes")
-         .addField("s.ban", "| ban la personne demander")
-         .addField("s.clear", "| suprime le nombre de message demander")
+         .setDescription("Toutes mes command y seront Archiver")
+         message.channel.send("```s.aide```           | Vous aideras Pour les commands")
          .setFooter("Sumen| By Nefer#4398")
       message.channel.sendMessage(aide_embed);
 
