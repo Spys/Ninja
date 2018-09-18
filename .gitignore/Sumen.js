@@ -33,7 +33,8 @@ client.on("message", message => {
       if(message.content === prefix + "aide")
         var aide_embed = new Discord.RichEmbed()
          .setColor("#61BCFF")
-         message.channel.send("``s.aide``  *=*  ``Vous aideras pour les commands``");
+         .setTitle("cette command et en maintenances...")
+         .setDescription("en raison de probleme Informatiques cette command et en maintenances donc tous les commands egalement")
       message.channel.sendMessage(aide_embed);
 
       if(message.content === prefix + "invite")
