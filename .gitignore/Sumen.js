@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
  
-var prefix = "s_";
+var prefix = "s.";
  
 var client = new Discord.Client();
 
@@ -12,7 +12,7 @@ var servers = {};
  
 client.on(`ready`, function () {
     console.log("Je suis connecter !");
-    client.user.setActivity("s_aide | By nefer")
+    client.user.setActivity("s.aide | By nefer")
 })
 
 function play(connection, message) {
@@ -35,15 +35,15 @@ client.on("message", message => {
          .setColor("#61BCFF")
          .setTitle("|*Voici ma liste de mes command*")
          .setDescription("**Toutes mes command y seront Archiver**")
-         .addField("s_aide", "| Vous aideras Pour les commands")
-         .addField("s_invite", "| Envoie la seul invitation du bot")
-         .addField("s_statistiques", "| Vous envoie vos Statistiques en message prive")
-         .addField("s_infobot", "| je vous montre toutes Mes Information")
-         .addField("s_infoserv", "| Je vous montre quelques Informations sur le serveur")
-         .addField("s_kick", "| Vous permet de Kick une personnes")
-         .addField("s_ban", "| ban la personne demander")
-         .addField("s_clear", "| suprime le nombre de message demander")
-         .setFooter("__Sumen__| By Nefer#4398")
+         .addField("s.aide", "| Vous aideras Pour les commands")
+         .addField("s.invite", "| Envoie la seul invitation du bot")
+         .addField("s.stat", "| Vous envoie vos Statistiques en message prive")
+         .addField("s.infobot", "| je vous montre toutes Mes Information")
+         .addField("s.infoserv", "| Je vous montre quelques Informations sur le serveur")
+         .addField("s.kick", "| Vous permet de Kick une personnes")
+         .addField("s.ban", "| ban la personne demander")
+         .addField("s.clear", "| suprime le nombre de message demander")
+         .setFooter("Sumen| By Nefer#4398")
       message.channel.sendMessage(aide_embed);
 
       if(message.content === prefix + "invite")
@@ -59,7 +59,7 @@ client.on("message", message => {
           var args = message.content.substring(prefix.length).split(" ");
 
         switch (args[0].toLowerCase()) {
-          case "statistiques":
+          case "stat":
              
              var userCreateDate = message.author.createdAt.toString().split(" ");
              var msgauthor = message.author.id;
@@ -98,21 +98,22 @@ client.on("message", message => {
             message.channel.sendMessage(infoserv_embed)
         }
         if(message.content.startsWith(prefix + "kick")) {
-            if(!message.guild.member(message.author).hasPermission("KICK_MEMBERS")) return message.channel.send(":warning:| Vous n'avez pas la permission ! ")
+            if(!message.guild.member(message.author).hasPermission("KICK_MEMBERS")) return message.channel.send(`:warning:|${member.author.username} Vous n'avez pas la permission ! `)
 
             if(message.mentions.users.size === 0) {
-                return message.channel.send(":cop:| Vous devez mentionner un utilisateur concerner !")
+                return message.channel.send(`:cop:|${member.author.username} Vous devez mentionner un utilisateur concerner !`)
             }
 
             var kick = message.guild.member(message.mentions.users.first());
+
             if(!kick) {
-                return message.channel.send(":shrug:| je ne sais pas si l'utilisateur existe").catch()
+                return message.channel.send(":shrug:| je ne sais pas si l'utilisateur existe")
             }
             if(!message.guild.member(client.user).hasPermission("KICK_MEMBERS")) {
-                return message.channel.send(":poop:| je n'ai pas la permission de faire ceci").catch()
+                return message.channel.send(":poop:| je n'ai pas la permission de faire ceci")
             }
             kick.kick().then(member => {
-                message.channel.send(`${member.user.username} est kick par ${message.author.username}`).catch()
+                message.channel.send(`${member.user.username} est kick par ${message.author.username}`)
             });
         }
         if(message.content.startsWith(prefix + "ban")) {
