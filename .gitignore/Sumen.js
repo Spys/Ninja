@@ -33,8 +33,6 @@ client.on("message", message => {
       if(message.content === prefix + "aide")
         var aide_embed = new Discord.RichEmbed()
          .setColor("#61BCFF")
-         .setTitle("|*Voici ma liste de mes command*")
-         .setDescription("Toutes mes command y seront Archiver")
          message.channel.send("``s.aide``  *=*  ``Vous aideras pour les commands``");
       message.channel.sendMessage(aide_embed);
 
